@@ -1,13 +1,15 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import Memory from '@/pages/Memory';
+import Home from '@/pages/Home';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
-        <Route path="/mini-games/memory" element={<Memory />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/memory" element={<Memory />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
